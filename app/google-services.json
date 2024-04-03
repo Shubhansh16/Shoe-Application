@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "561886843945",
+    "project_id": "shoe-application",
+    "storage_bucket": "shoe-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561886843945:android:fcad30dd80b24e938c7838",
+        "android_client_info": {
+          "package_name": "com.example.shoeapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2Enjia0sWd49ZU6OGmt729lOXwHcNZv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
