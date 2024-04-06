@@ -1,9 +1,7 @@
 package com.example.shoeapplication.actitvity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.shoeapplication.MainActivity
 import com.example.shoeapplication.databinding.ActivityIntroBinding
 
 
