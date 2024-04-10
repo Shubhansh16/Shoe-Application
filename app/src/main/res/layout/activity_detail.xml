@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    tools:context=".actitvity.DetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivBackBtn"
+                    android:layout_width="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back" />
+
+                <ImageView
+                    android:id="@+id/ivFavBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/fav_icon" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:layout_width="match_parent"
+                android:layout_height="290dp"
+                android:id="@+id/slider"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:background="@drawable/grey_bg"/>
+
+            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                android:id="@+id/dotsIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:dotsColor="@color/grey"
+                app:dotsCornerRadius="8dp"
+                app:dotsSize="6dp"
+                app:dotsSpacing="2dp"
+                app:dotsWidthFactor="2.5"
+                app:selectedDotColor="@color/purple"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_gravity="center"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:id="@+id/colorList"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:layout_height="match_parent" />
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/titleTxt"
+                    android:layout_weight="1"
+                    android:text="Title"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/priceTxt"
+                    android:layout_width="wrap_content"
+                    android:text="₹0"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView22"
+                    android:text="Select Size"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppinsbold"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView23"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/star"
+                    android:fontFamily="@font/poppinsregular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingTxt"
+                    android:text="5"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsregular"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sizeList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/descriptionTxt"
+                android:text="Shubhansh"
+                android:layout_margin="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@android:style/Widget.Button"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:text="Buy Now"
+                    android:background="@drawable/purple_btn_bg"
+                    android:id="@+id/addToCartBtn"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    android:layout_height="wrap_content"
+                    />
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:id="@+id/cartBtn"
+                    android:background="@drawable/grey_bg"
+                    android:layout_margin="8dp"
+                    app:tint="@color/black"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_2"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -65,6 +65,7 @@
         android:layout_marginEnd="8dp"/>
 
     <TextView
+        android:id="@+id/titleTxt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="shubhansh"

@@ -1,4 +1,4 @@
-package com.example.shoeapplication
+package com.example.shoeapplication.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -10,6 +10,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterInside
 import com.bumptech.glide.request.RequestOptions
+import com.example.shoeapplication.R
 import com.example.shoeapplication.models.SliderModel
 
 
@@ -27,13 +28,13 @@ class SliderAdapter(
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): SliderAdapter.SliderViewHolder {
+    ): SliderViewHolder {
         context=parent.context
         val view= LayoutInflater.from(parent.context).inflate(R.layout.slider_item_container,parent,false)
         return SliderViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: SliderAdapter.SliderViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SliderViewHolder, position: Int) {
         holder.setImage(sliderItems[position],context)
         if (position==sliderItems.lastIndex-1){
             viewPager2.post(runnable)

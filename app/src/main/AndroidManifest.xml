@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ShoeApplication"
         tools:targetApi="31">
         <activity
+            android:name=".actitvity.DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".actitvity.BaseActivity"
             android:exported="false" />
         <activity
@@ -26,9 +29,7 @@
         </activity>
         <activity
             android:name=".actitvity.MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
