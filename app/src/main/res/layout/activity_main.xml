@@ -279,7 +279,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView10"
+                    android:id="@+id/cartBtnImage"
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:layout_gravity="center"
@@ -287,7 +287,7 @@
                     android:src="@drawable/btn_2" />
 
                 <TextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/cartTxt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"

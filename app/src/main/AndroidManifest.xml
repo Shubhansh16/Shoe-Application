@@ -8,10 +8,14 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ShoeApplication"
         tools:targetApi="31">
+        <activity
+            android:name=".actitvity.CartActivity"
+            android:exported="false" />
         <activity
             android:name=".actitvity.DetailActivity"
             android:exported="false" />
@@ -29,7 +33,7 @@
         </activity>
         <activity
             android:name=".actitvity.MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

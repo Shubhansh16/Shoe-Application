@@ -2,6 +2,7 @@ package com.example.shoeapplication.models
 
 import android.os.Parcel
 import android.os.Parcelable
+import java.util.LinkedList
 
 data class ItemModel(
     var title:String="",
@@ -23,16 +24,16 @@ data class ItemModel(
     )
 
     override fun describeContents(): Int {
-        TODO("Not yet implemented")
+        return 0
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(title)
         parcel.writeString(description)
+        parcel.writeStringList(picUrl)
+        parcel.writeStringList(size)
         parcel.writeDouble(price)
         parcel.writeDouble(rating)
-        parcel.writeInt(numberInCart)
-        parcel.writeStringList(picUrl)
     }
 
     companion object CREATOR : Parcelable.Creator<ItemModel> {

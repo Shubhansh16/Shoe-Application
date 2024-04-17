@@ -27,10 +27,9 @@ class ColorAdapter(val items:MutableList<String>):RecyclerView.Adapter<ColorAdap
     }
 
     override fun onBindViewHolder(holder: ColorAdapter.Viewholder, position: Int) {
-        val item =items[position]
 
         Glide.with(holder.itemView.context)
-            .load(item[position])
+            .load(items[position])
             .into(holder.binding.picColor)
 
         holder.binding.root.setOnClickListener {
@@ -41,7 +40,7 @@ class ColorAdapter(val items:MutableList<String>):RecyclerView.Adapter<ColorAdap
         }
 
         if (selectedPosition==position){
-            holder.binding.colorLayout.setBackgroundResource(R.drawable.purple_btn_bg)
+            holder.binding.colorLayout.setBackgroundResource(R.drawable.grey_bg222)
 
         } else {
             holder.binding.colorLayout.setBackgroundResource(R.drawable.grey_bg)

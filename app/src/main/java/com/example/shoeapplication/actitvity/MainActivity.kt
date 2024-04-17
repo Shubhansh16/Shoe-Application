@@ -1,5 +1,6 @@
 package com.example.shoeapplication.actitvity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -30,6 +31,13 @@ class MainActivity : BaseActivity() {
         initBanner()
         initBrand()
         initPopular()
+        initBottomMenu()
+    }
+
+    private fun initBottomMenu() {
+        binding.cartBtnImage.setOnClickListener {
+            startActivity(Intent(this@MainActivity,CartActivity::class.java))
+        }
     }
 
     private fun initBanner(){

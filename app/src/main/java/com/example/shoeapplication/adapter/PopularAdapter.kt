@@ -13,21 +13,18 @@ import com.example.shoeapplication.databinding.ViewholderBrandBinding
 import com.example.shoeapplication.databinding.ViewholderRecommendationsBinding
 import com.example.shoeapplication.models.ItemModel
 
-class PopularAdapter(val items:MutableList<ItemModel>):RecyclerView.Adapter<PopularAdapter.ViewHolder>() {
+class PopularAdapter(val items:MutableList<ItemModel>):RecyclerView.Adapter<PopularAdapter.Viewholder>() {
 
     private var context: Context?=null
+ class Viewholder(val binding: ViewholderRecommendationsBinding):RecyclerView.ViewHolder(binding.root)
 
-    class ViewHolder(val binding: ViewholderRecommendationsBinding):RecyclerView.ViewHolder(binding.root){
-
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularAdapter.Viewholder {
         context=parent.context
         val binding = ViewholderRecommendationsBinding.inflate(LayoutInflater.from(context),parent,false)
-        return ViewHolder(binding)
+        return Viewholder(binding)
     }
 
-    override fun onBindViewHolder(holder: PopularAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: PopularAdapter.Viewholder, position: Int) {
         holder.binding.titleTxt.text= items[position].title
         holder.binding.price.text="₹"+items[position].price.toString()
         holder.binding.starNum.text=items[position].rating.toString()
@@ -36,7 +33,8 @@ class PopularAdapter(val items:MutableList<ItemModel>):RecyclerView.Adapter<Popu
         Glide.with(holder.itemView.context)
             .load(items[position].picUrl[0])
             .apply(requestOptions)
-            .into(holder.binding.recommendationIv1)
+            .into(holder.binding.recommendationIv1
+            )
 
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context,DetailActivity::class.java)

@@ -27,19 +27,18 @@ class SizeAdapter(val items:MutableList<String>):RecyclerView.Adapter<SizeAdapte
     }
 
     override fun onBindViewHolder(holder: SizeAdapter.Viewholder, position: Int) {
-        val item =items[position]
 
-        holder.binding.sizeTxt.text=items[position]
+        holder.binding.sizeTxt.text = items[position]
 
         holder.binding.root.setOnClickListener {
-            lastSelectedPosition=selectedPosition
-            selectedPosition=position
+            lastSelectedPosition = selectedPosition
+            selectedPosition = position
             notifyItemChanged(lastSelectedPosition)
             notifyItemChanged(selectedPosition)
         }
 
         if (selectedPosition==position){
-            holder.binding.sizeLayout.setBackgroundResource(R.drawable.purple_btn_bg)
+            holder.binding.sizeLayout.setBackgroundResource(R.drawable.grey_bg222)
             holder.binding.sizeTxt.setTextColor(context.resources.getColor(R.color.purple))
         } else {
             holder.binding.sizeLayout.setBackgroundResource(R.drawable.grey_bg)
